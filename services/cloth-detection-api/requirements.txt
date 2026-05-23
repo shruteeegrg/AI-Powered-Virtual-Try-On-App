@@ -1,0 +1,23 @@
+# services/cloth-detection-api/requirements.txt
+
+# --- Core ML Libraries (Updated for macOS / ARM compatibility) ---
+# Using torch 2.2.0, which pip has confirmed is available for your system.
+# No +cu118 needed, as pip will select the correct non-CUDA build for Mac.
+torch==2.2.0
+torchvision==0.17.0
+torchaudio==2.2.0
+ultralytics==8.0.220
+
+# --- NumPy Compatibility Fix ---
+# Still needed for torch 2.2.0
+numpy<2.0
+
+# --- FastAPI Server ---
+fastapi
+uvicorn
+pydantic
+python-multipart
+
+# --- Utilities ---
+Pillow
+requests
